@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-TuCamisa-5D125755-8EBE-417E-8896-87B90C9A07F3</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\AKE.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Producto\Controllers\" />
+    <Folder Include="Areas\Producto\Data\" />
+    <Folder Include="Areas\Soluciones\Controllers\" />
+    <Folder Include="Areas\Soluciones\Data\" />
+    <Folder Include="Areas\Soluciones\Models\" />
+    <Folder Include="Areas\Soporte\Controllers\" />
+    <Folder Include="Areas\Soporte\Data\" />
+    <Folder Include="Areas\Soporte\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\assets\fonts\Simple-Line-Icons.svg" />
+    <None Include="wwwroot\assets\fonts\Simple-Line-Icons.woff2" />
+    <None Include="wwwroot\assets\js\Customizable-Carousel-swipe-enabled.js" />
+    <None Include="wwwroot\assets\js\jquery.min.js" />
+    <None Include="wwwroot\images\AKE.png" />
+  </ItemGroup>
+
+</Project>

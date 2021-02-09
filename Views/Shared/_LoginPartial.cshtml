@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" />
+ 
+    <link rel="stylesheet" href="~/assets/css/styles.css" />
+
+
+
+    <ul class="navbar-nav">
+        @if (SignInManager.IsSignedIn(User))
+        {
+
+            <li class="nav-item form-inline ">
+                <label class=" nav-link text-dark">
+                    Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp;
+                    <input disabled type="text" id="username" name="username">
+                </label>
+
+            </li>
+            <li class="nav-item form-inline ">
+                <div class="dropdown show">
+                    <a class="nav-link text-dark dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mi Cuenta
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <p class="nav-link text-dark" asp-area=" " asp-page="">@User.Identity.Name <i class="fa fa-user-o" se aria-hidden="true"></i></p>
+
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link text-dark">Cerrar Sesión <i class="fa fa-sign-out" aria-hidden="true"></i> </button>
+                </form>
+
+                    </div>
+                </div>
+            </li>
+        }
+        else
+        {
+
+            <li class="nav-item form-inline ">
+                <label class=" nav-link text-dark">
+                    Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp;
+                    <input disabled type="text" id="username" name="username">
+                </label>
+
+            </li>
+            <li class="nav-item form-inline ">
+                <div class="dropdown show">
+                    <a class="nav-link text-dark dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mi Cuenta
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="nav-link text-dark" asp-area="Producto" asp-page="/Account/Register">Registrarse <i class="fa fa-plus" aria-hidden="true"></i></a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home"  asp-action="Log">Iniciar Sesión <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </li>
+
+        }
+    </ul>

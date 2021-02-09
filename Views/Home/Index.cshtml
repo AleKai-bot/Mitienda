@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" />
+<link rel="stylesheet" href="~/assets/css/best-carousel-slide.css" />
+<link rel="stylesheet" href="~/assets/css/styles.css" />
+
+
+<div class="text-center">
+    <h1 class="display-4">TECNO AKE</h1>
+</div>
+<br>
+
+
+<section id="carousel">
+    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <div class="jumbotron hero-nature carousel-hero">
+                    <h1 class="hero-title">Soporte Técnico</h1>
+                    <p class="hero-subtitle"></p>
+                    <p><a class="btn btn-danger hero-button plat" role="button" asp-area="Soporte" asp-page="/Account/SoporteTec">Leer más</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="jumbotron hero-photography carousel-hero">
+                    <h1 class="hero-title">Soluciones Informáticas</h1>
+                    <p class="hero-subtitle">Tecnología diseñada para tus necesidades </p>
+                    <p><a class="btn btn-danger hero-button plat" role="button" asp-area="Soluciones" asp-page="/Account/SolucionesInfo">Leer más</a></p>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <div class="jumbotron hero-technology carousel-hero">
+                    <h1 class="hero-title">Componentes para tu Computadora</h1>
+                    <p class="hero-subtitle">Lo que necesitas a un click de distancia</p>
+                    <p><a class="btn btn-danger hero-button plat" role="button" asp-area="Producto" asp-page="/Account/Catalogo">Leer más</a></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
+                <i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
+                <i class="fa fa-chevron-right"></i><span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-1" data-slide-to="0"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+            <li data-target="#carousel-1" data-slide-to="2" class="active"></li>
+        </ol>
+    </div>
+</section>
+
+
+<br>
+<br>
+<br>
+<br>
